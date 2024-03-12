@@ -50,10 +50,10 @@ export default function Index() {
                         priority={true}
                     />
                 </div>
-                <div className={styles.column}>
+                <div className={`${styles.column} highlight-text`}>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit, optio unde numquam temporibus, asperiores vel exercitationem mollitia cumque placeat rem ipsum! Earum repellat numquam dolore omnis est optio ea.</p>
                 </div>
-                <div className={styles.column}>
+                <div className={`${styles.column} highlight-text`}>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A veniam vero nam, velit obcaecati quaerat minus natus minima, reprehenderit nemo facere corporis consequuntur in. Aperiam itaque quam vero tenetur nam?</p>
                 </div>
             </div>
@@ -62,7 +62,7 @@ export default function Index() {
                 {
                     projects.map( (project, index) => {
                         return <div key={index} onMouseOver={() => {setSelectedProject(index)}} className={styles.projectEl}>
-                            <h2>{project.title}</h2>
+                            <h2 className="highlight-text">{project.title}</h2>
                         </div>
                     })
                 }
